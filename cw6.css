@@ -53,6 +53,10 @@ svg {
   width: 30px;
 }
 
+.delete-icon {
+  margin-left: 3%;
+}
+
 .row {
   display: flex;
   flex-direction: row;
