@@ -192,3 +192,12 @@ button {
 .add-task input {
   text-align: right;
 }
+
+.add-task button:hover {
+  cursor: pointer;
+  background-color: rgb(165, 165, 165);
+}
+
+.add-task button:active {
+  background-color: white;
+}
