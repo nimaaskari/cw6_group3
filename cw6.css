@@ -201,3 +201,7 @@ button {
 .add-task button:active {
   background-color: white;
 }
+
+.add-task :nth-child(2) {
+  text-align: center;
+}
