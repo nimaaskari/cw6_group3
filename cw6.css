@@ -108,6 +108,23 @@ button {
   background-color: #e7f6f2;
 }
 
+.add-task input {
+  text-align: right;
+}
+
+.add-task button:hover {
+  cursor: pointer;
+  background-color: rgb(165, 165, 165);
+}
+
+.add-task button:active {
+  background-color: white;
+}
+
+.add-task :nth-child(2) {
+  text-align: center;
+}
+
 .login-modal {
   z-index: 50;
   box-shadow: 1px 1px 10px 5px #111;
@@ -191,21 +208,4 @@ button {
 
 .hidden {
   display: none;
-}
-
-.add-task input {
-  text-align: right;
-}
-
-.add-task button:hover {
-  cursor: pointer;
-  background-color: rgb(165, 165, 165);
-}
-
-.add-task button:active {
-  background-color: white;
-}
-
-.add-task :nth-child(2) {
-  text-align: center;
 }
