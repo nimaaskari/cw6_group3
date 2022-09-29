@@ -17,7 +17,12 @@
   margin: auto;
   width: 95vw;
   min-height: 50vh;
-  background-color: #2c3333;
+  /* background-color: #2c3333; */
+  background: linear-gradient(
+    90deg,
+    rgba(184, 0, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -28,20 +33,31 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
+  gap: 5px;
+  margin-bottom: 15px;
 }
 
 .day {
-  background-color: #395b64;
-  border: 1px solid #111;
+  background-color: #01313f;
+  /* border: 1px solid #111; */
   border-radius: 10px;
+  padding: 5px;
+  box-shadow: 1px 1px 2px #222;
+}
+
+.day h3,
+p {
+  margin: 3px 0;
 }
 
 .hi {
+  margin: 20px 0;
   display: flex;
   justify-content: space-between;
   padding: 0 3%;
   align-items: center;
+  color: #111;
+  font-size: 20px;
 }
 
 .hi svg {
@@ -49,6 +65,10 @@
 }
 
 svg {
+  filter: opacity(90%);
+
+  filter: drop-shadow(1px 1px 1px #333);
+
   height: 30px;
   width: 30px;
 }
@@ -75,22 +95,27 @@ svg {
 
 .task {
   width: 95%;
-  background-color: #a5c9ca;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 171, 0, 1) 0%,
+    rgba(227, 255, 0, 1) 100%
+  );
   border: none;
   border-radius: 10px;
+  box-shadow: 3px 3px 7px #222;
   display: flex;
-  color: #2c3333;
+  color: #000;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 3%;
-  margin: 10px 0;
+  padding: 10px 3%;
+  margin: 5px 0;
 }
 
 .add-task {
   width: 100%;
   left: 0;
   bottom: 0;
-  background-color: #395b64;
+  background-color: #01313f;
   padding: 3% 3%;
   border: none;
   /* border-radius: 10px; */
@@ -108,21 +133,10 @@ button {
   background-color: #e7f6f2;
 }
 
-.add-task input {
-  text-align: right;
-}
-
-.add-task button:hover {
-  cursor: pointer;
-  background-color: rgb(165, 165, 165);
-}
-
-.add-task button:active {
-  background-color: white;
-}
-
-.add-task :nth-child(2) {
-  text-align: center;
+.add-task button {
+  background-color: rgb(255, 0, 50);
+  color: #eee;
+  font-size: 18px;
 }
 
 .login-modal {
@@ -208,4 +222,21 @@ button {
 
 .hidden {
   display: none;
+}
+
+.add-task input {
+  text-align: right;
+}
+
+.add-task button:hover {
+  cursor: pointer;
+  background-color: rgb(165, 165, 165);
+}
+
+.add-task button:active {
+  background-color: white;
+}
+
+.add-task :nth-child(2) {
+  text-align: center;
 }
