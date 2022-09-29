@@ -184,6 +184,11 @@ button {
 .is-blurred {
   filter: blur(3px);
 }
+
 .hidden {
   display: none;
+}
+
+.add-task input {
+  text-align: right;
 }
