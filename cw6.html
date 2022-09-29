@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./cw6.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div class="login-modal">
-      <input type="text" id="name" placeholder="نام کاربری" />
-      <input type="text" id="lastName" placeholder="نام و نام خانوادگی" />
-      <input type="text" id="phone" placeholder="شماره موبایل" />
-      <button class="enter">ورود</button>
-    </div>
-    <div class="edit-modal hidden">
-      <input type="text" placeholder="اصلاح وظیفه" />
-      <button class="enter">ثبت</button>
-    </div>
-    <div class="main is-blurred">
-      <div>
-        <div class="days">
-          <div class="day back satButt" onclick="dayOnClick(this)">
-            <h3>شنبه</h3>
-            <p id="sat">0</p>
-          </div>
-          <div class="day back sunButt" onclick="dayOnClick(this)">
-            <h3>یکشنبه</h3>
-            <p id="sun">0</p>
-          </div>
-          <div class="day back monButt" onclick="dayOnClick(this)">
-            <h3>دوشنبه</h3>
-            <p id="mon">0</p>
-          </div>
-          <div class="day back tueButt" onclick="dayOnClick(this)">
-            <h3>سه شنبه</h3>
-            <p id="tue">0</p>
-          </div>
-          <div class="day back wedButt" onclick="dayOnClick(this)">
-            <h3>چهارشنبه</h3>
-            <p id="wed">0</p>
-          </div>
-          <div class="day back thuButt" onclick="dayOnClick(this)">
-            <h3>پنجشنبه</h3>
-            <p id="thu">0</p>
-          </div>
-          <div class="day back friButt" onclick="dayOnClick(this)">
-            <h3>جمعه</h3>
-            <p id="fri">0</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./cw6.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="login-modal">
+    <input type="text" id="name" placeholder="نام کاربری" />
+    <input type="text" id="lastName" placeholder="نام و نام خانوادگی" />
+    <input type="text" id="phone" placeholder="شماره موبایل" />
+    <button class="enter">ورود</button>
+  </div>
+  <div class="edit-modal hidden">
+    <input type="text" placeholder=":اصلاح وظیفه" />
+    <button class="enter">ثبت</button>
+  </div>
+  <div class="main is-blurred">
+    <div>
+      <div class="days">
+        <div class="day back satButt" onclick="dayOnClick(this)">
+          <h3>شنبه</h3>
+          <p id="sat">0</p>
         </div>
-        <div class="hi">
-          <p id="hiUser">سلام ...</p>
-          <svg
-            class="delete-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="96"
-            height="96"
-            viewBox="0 0 24 24"
-            style="fill: #000000"
-          >
-            <path
-              d="M 10.806641 2 C 10.289641 2 9.7956875 2.2043125 9.4296875 2.5703125 L 9 3 L 4 3 A 1.0001 1.0001 0 1 0 4 5 L 20 5 A 1.0001 1.0001 0 1 0 20 3 L 15 3 L 14.570312 2.5703125 C 14.205312 2.2043125 13.710359 2 13.193359 2 L 10.806641 2 z M 4.3652344 7 L 5.8925781 20.263672 C 6.0245781 21.253672 6.877 22 7.875 22 L 16.123047 22 C 17.121047 22 17.974422 21.254859 18.107422 20.255859 L 19.634766 7 L 4.3652344 7 z"
-            ></path>
-          </svg>
+        <div class="day back sunButt" onclick="dayOnClick(this)">
+          <h3>یکشنبه</h3>
+          <p id="sun">0</p>
         </div>
-        <div class="tasks">
-          <!-- <div class="task">
+        <div class="day back monButt" onclick="dayOnClick(this)">
+          <h3>دوشنبه</h3>
+          <p id="mon">0</p>
+        </div>
+        <div class="day back tueButt" onclick="dayOnClick(this)">
+          <h3>سه شنبه</h3>
+          <p id="tue">0</p>
+        </div>
+        <div class="day back wedButt" onclick="dayOnClick(this)">
+          <h3>چهارشنبه</h3>
+          <p id="wed">0</p>
+        </div>
+        <div class="day back thuButt" onclick="dayOnClick(this)">
+          <h3>پنجشنبه</h3>
+          <p id="thu">0</p>
+        </div>
+        <div class="day back friButt" onclick="dayOnClick(this)">
+          <h3>جمعه</h3>
+          <p id="fri">0</p>
+        </div>
+      </div>
+      <div class="hi">
+        <p id="hiUser">سلام ...</p>
+        <svg class="delete-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96"
+          viewBox="0 0 24 24" style="fill: #000000">
+          <path
+            d="M 10.806641 2 C 10.289641 2 9.7956875 2.2043125 9.4296875 2.5703125 L 9 3 L 4 3 A 1.0001 1.0001 0 1 0 4 5 L 20 5 A 1.0001 1.0001 0 1 0 20 3 L 15 3 L 14.570312 2.5703125 C 14.205312 2.2043125 13.710359 2 13.193359 2 L 10.806641 2 z M 4.3652344 7 L 5.8925781 20.263672 C 6.0245781 21.253672 6.877 22 7.875 22 L 16.123047 22 C 17.121047 22 17.974422 21.254859 18.107422 20.255859 L 19.634766 7 L 4.3652344 7 z">
+          </path>
+        </svg>
+      </div>
+      <div class="tasks">
+        <!-- <div class="task">
             <div class="row">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,15 +110,16 @@
               </svg>
             </div>
           </div> -->
-        </div>
-      </div>
-      <div class="add-task">
-        <input type="text" placeholder="وظیفه جدید" />
-
-        <input type="time" name="" id="" />
-        <button>افزودن</button>
       </div>
     </div>
-    <script src="./cw6.js"></script>
-  </body>
+    <div class="add-task">
+      <input type="text" placeholder="وظیفه جدید" />
+
+      <input type="time" name="" id="" />
+      <button>افزودن</button>
+    </div>
+  </div>
+  <script src="./cw6.js"></script>
+</body>
+
 </html>
