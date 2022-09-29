@@ -105,6 +105,7 @@ function daysCounter() {
 }
 
 function defaultTask(day) {
+  tasks.innerHTML = '';
   for (let i = 0; i < days.length; i++) {
     days[i].task.sort((a, b) => {
       return a.taskTime - b.taskTime;
@@ -163,5 +164,23 @@ function defaultTask(day) {
 </div>`;
       }
     }
+  }
+}
+
+function dayOnClick(e) {
+  if (e.innerHTML.includes('sat')) {
+    defaultTask('saturday');
+  } else if (e.innerHTML.includes('sun')) {
+    defaultTask('sunday');
+  } else if (e.innerHTML.includes('mon')) {
+    defaultTask('monday');
+  } else if (e.innerHTML.includes('tue')) {
+    defaultTask('tuesday');
+  } else if (e.innerHTML.includes('wed')) {
+    defaultTask('wednesday');
+  } else if (e.innerHTML.includes('thu')) {
+    defaultTask('thursday');
+  } else if (e.innerHTML.includes('fri')) {
+    defaultTask('friday');
   }
 }
