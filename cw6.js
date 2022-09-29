@@ -77,6 +77,7 @@ let tue = document.querySelector('#tue');
 let wed = document.querySelector('#wed');
 let thu = document.querySelector('#thu');
 let fri = document.querySelector('#fri');
+let dayArr = document.querySelectorAll('.day');
 
 entreButton.addEventListener('click', () => {
   let phoneIsValid =
@@ -168,19 +169,30 @@ function defaultTask(day) {
 }
 
 function dayOnClick(e) {
+  for (let i = 0; i < dayArr.length; i++) {
+    console.log(dayArr[i]);
+    dayArr[i].classList.add('back');
+  }
   if (e.innerHTML.includes('sat')) {
+    e.classList.remove('back');
     defaultTask('saturday');
   } else if (e.innerHTML.includes('sun')) {
+    e.classList.remove('back');
     defaultTask('sunday');
   } else if (e.innerHTML.includes('mon')) {
+    e.classList.remove('back');
     defaultTask('monday');
   } else if (e.innerHTML.includes('tue')) {
+    e.classList.remove('back');
     defaultTask('tuesday');
   } else if (e.innerHTML.includes('wed')) {
+    e.classList.remove('back');
     defaultTask('wednesday');
   } else if (e.innerHTML.includes('thu')) {
+    e.classList.remove('back');
     defaultTask('thursday');
   } else if (e.innerHTML.includes('fri')) {
+    e.classList.remove('back');
     defaultTask('friday');
   }
 }
