@@ -105,9 +105,11 @@ button {
 }
 
 .login-modal {
+  z-index: 50;
+  box-shadow: 1px 1px 10px 5px #111;
   display: flex;
   flex-direction: column;
-  background-color: #ddd;
+  background-color: #a5c9ca;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
@@ -122,17 +124,19 @@ button {
 }
 
 .login-modal input {
+  background-color: #e7f6f2;
   width: 100%;
   text-align: right;
   padding: 20px 10px;
   border-radius: 5px;
   border: none;
+  background-color: #e7f6f2;
 }
 
 .login-modal button {
   padding: 10px 0;
   width: 50%;
-  background-color: rgb(0, 255, 191);
+  background-color: #395b64;
   color: white;
   font-size: 20px;
   border-radius: 10px;
@@ -140,9 +144,11 @@ button {
 }
 
 .edit-modal {
+  z-index: 51;
+  box-shadow: 1px 1px 10px 5px #111;
   display: flex;
   flex-direction: column;
-  background-color: #ddd;
+  background-color: #a5c9ca;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
@@ -158,6 +164,7 @@ button {
 
 .edit-modal input {
   width: 100%;
+  background-color: #e7f6f2;
   text-align: right;
   padding: 20px 10px;
   border-radius: 5px;
@@ -167,13 +174,16 @@ button {
 .edit-modal button {
   padding: 10px 0;
   width: 50%;
-  background-color: rgb(0, 255, 191);
+  background-color: #395b64;
   color: white;
   font-size: 20px;
   border-radius: 10px;
   border: none;
 }
 
+.is-blurred {
+  filter: blur(3px);
+}
 .hidden {
   display: none;
 }
