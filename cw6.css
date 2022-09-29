@@ -1,8 +1,66 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .main {
-  width: 100vw;
+  padding: 5px;
+  margin: auto;
+  width: 95vw;
+  background-color: azure;
 }
 
 .days {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+  background-color: #eee;
+  border: 1px solid #aaa;
+}
+
+.hi {
   display: flex;
+  justify-content: space-between;
+  padding: 0 3%;
+  align-items: center;
+}
+
+svg {
+  height: 30px;
+  width: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.task {
+  background-color: #eee;
+  border: 3px solid #aaa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+
+.add-task {
+  background-color: #eee;
+  padding: 1% 5%;
+  border: 3px solid #aaa;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 4fr 1fr 2fr;
+  gap: 4%;
 }
