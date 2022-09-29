@@ -70,6 +70,13 @@ let lastName = document.querySelector('#lastName');
 let phone = document.querySelector('#phone');
 let hiUser = document.querySelector('#hiUser');
 let tasks = document.querySelector('.tasks');
+let sat = document.querySelector('#sat');
+let sun = document.querySelector('#sun');
+let mon = document.querySelector('#mon');
+let tue = document.querySelector('#tue');
+let wed = document.querySelector('#wed');
+let thu = document.querySelector('#thu');
+let fri = document.querySelector('#fri');
 
 entreButton.addEventListener('click', () => {
   let phoneIsValid =
@@ -82,11 +89,20 @@ entreButton.addEventListener('click', () => {
     main.classList.toggle('is-blurred');
     hiUser.textContent = `سلام ` + userData.name;
     defaultTask('saturday');
+    daysCounter();
   } else {
     alert('failed to login(wrong input value)');
   }
 });
-function daysCounter() {}
+function daysCounter() {
+  sat.textContent = days[0].task.length;
+  sun.textContent = days[1].task.length;
+  mon.textContent = days[2].task.length;
+  tue.textContent = days[3].task.length;
+  wed.textContent = days[4].task.length;
+  thu.textContent = days[5].task.length;
+  fri.textContent = days[6].task.length;
+}
 
 function defaultTask(day) {
   for (let i = 0; i < days.length; i++) {
