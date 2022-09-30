@@ -79,6 +79,7 @@ let wed = document.querySelector('#wed');
 let thu = document.querySelector('#thu');
 let fri = document.querySelector('#fri');
 let dayArr = document.querySelectorAll('.day');
+const daysWeek = ["saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
 
 entreButton.addEventListener('click', () => {
   let phoneIsValid =
@@ -206,17 +207,20 @@ function removingTask(e) {
     // console.log(i)
     if (days[flagDay].task[i].taskId === tempId) {
       days[flagDay].task.splice(i, 1);
+      daysCounter();
+      console.log(days[flagDay].task)
       break;
     }
   }
   selectedTask.remove();
-  daysCounter();
+  // daysCounter();
   // console.log(days[flagDay].task)
 }
 function deleteAll() {
   let temp = 0;
   for (let i = 0; i < days[flagDay].task.length; i++) {
     temp = document.getElementById(`${days[flagDay].task[i].taskId}`);
+    console.log(document.getElementById(`${days[flagDay].task[i].taskId}`))
     temp.remove();
   }
   days[flagDay].task.splice(0, days[flagDay].task.length)
@@ -275,15 +279,16 @@ function submitEdit(e) {
 function addTask(e) {
   if (document.getElementById("add-new").value && document.getElementById("add-new-time").value) {
     let newObj = {
-      taskId: Math.floor((Math.random()) * (200000 - 90019 + 1)) + 90019,
+      taskId: (Math.floor((Math.random()) * (200000 - 90019 + 1)) + 90019).toString(),
       taskName: document.getElementById("add-new").value,
       taskTime: document.getElementById("add-new-time").value.split(":").join(""),
       isDone: false
     };
     days[flagDay].task.push(newObj);
-    const daysWeek = ["saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
     defaultTask(daysWeek[flagDay]);
     daysCounter();
+    document.getElementById("add-new").value = "";
+    document.getElementById("add-new-time").value = "";
   } else {
     alert("ورودی ها اشتباه هستند");
   }
