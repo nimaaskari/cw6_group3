@@ -2,57 +2,126 @@ let days = [
   {
     day: 'saturday',
     task: [
-      { taskId: "90001", taskName: 'رفتن به باشگاه', taskTime: '1800', isDone: false },
-      { taskId: "90002", taskName: 'رفتن به آرایشگاه', taskTime: '1000', isDone: false },
-      { taskId: "90003", taskName: 'پرداخت قسط وام مسکن', taskTime: '0800', isDone: true },
+      {
+        taskId: '90001',
+        taskName: 'رفتن به باشگاه',
+        taskTime: '1800',
+        isDone: false,
+      },
+      {
+        taskId: '90002',
+        taskName: 'رفتن به آرایشگاه',
+        taskTime: '1000',
+        isDone: false,
+      },
+      {
+        taskId: '90003',
+        taskName: 'پرداخت قسط وام مسکن',
+        taskTime: '0800',
+        isDone: true,
+      },
     ],
   },
   {
     day: 'sunday',
     task: [
-      { taskId: "90004", taskName: 'خرید مایحتاج خانه', taskTime: '0900', isDone: true },
-      { taskId: "90005", taskName: 'تولد مجید', taskTime: '2000', isDone: false },
-      { taskId: "90006", taskName: 'تمرین مکتب', taskTime: '1600', isDone: true },
+      {
+        taskId: '90004',
+        taskName: 'خرید مایحتاج خانه',
+        taskTime: '0900',
+        isDone: true,
+      },
+      {
+        taskId: '90005',
+        taskName: 'تولد مجید',
+        taskTime: '2000',
+        isDone: false,
+      },
+      {
+        taskId: '90006',
+        taskName: 'تمرین مکتب',
+        taskTime: '1600',
+        isDone: true,
+      },
     ],
   },
   {
     day: 'monday',
     task: [
-      { taskId: "90007", taskName: 'بازی فوتسال', taskTime: '1800', isDone: false },
       {
-        taskId: "90008",
+        taskId: '90007',
+        taskName: 'بازی فوتسال',
+        taskTime: '1800',
+        isDone: false,
+      },
+      {
+        taskId: '90008',
         taskName: 'قسمت جدید house of dragons',
         taskTime: '2200',
         isDone: false,
       },
-      { taskId: "90009", taskName: 'دوچرخه سواری', taskTime: '0700', isDone: true },
+      {
+        taskId: '90009',
+        taskName: 'دوچرخه سواری',
+        taskTime: '0700',
+        isDone: true,
+      },
     ],
   },
   {
     day: 'tuesday',
     task: [
-      { taskId: "90010", taskName: ' دیت', taskTime: '1800', isDone: true },
-      { taskId: "90011", taskName: ' خواب ظهر', taskTime: '1400', isDone: true },
-      { taskId: "90012", taskName: 'پارتی', taskTime: '2200', isDone: false },
-      { taskId: "90013", taskName: ' خواب شب', taskTime: '0400', isDone: false },
+      { taskId: '90010', taskName: ' دیت', taskTime: '1800', isDone: true },
+      {
+        taskId: '90011',
+        taskName: ' خواب ظهر',
+        taskTime: '1400',
+        isDone: true,
+      },
+      { taskId: '90012', taskName: 'پارتی', taskTime: '2200', isDone: false },
+      {
+        taskId: '90013',
+        taskName: ' خواب شب',
+        taskTime: '0400',
+        isDone: false,
+      },
     ],
   },
 
   {
     day: 'wednesday',
     task: [
-      { taskId: "90014", taskName: 'بازی فوتسال', taskTime: '1600', isDone: true },
-      { taskId: "90015", taskName: 'قسمت جدید rick and morty', taskTime: '2200', isDone: false },
-      { taskId: "90016", taskName: 'باشگاه', taskTime: '0900', isDone: true },
+      {
+        taskId: '90014',
+        taskName: 'بازی فوتسال',
+        taskTime: '1600',
+        isDone: true,
+      },
+      {
+        taskId: '90015',
+        taskName: 'قسمت جدید rick and morty',
+        taskTime: '2200',
+        isDone: false,
+      },
+      { taskId: '90016', taskName: 'باشگاه', taskTime: '0900', isDone: true },
     ],
   },
   {
     day: 'thursday',
-    task: [{ taskId: "90017", taskName: 'تابیدن ', taskTime: '2100', isDone: false }],
+    task: [
+      { taskId: '90017', taskName: 'تابیدن ', taskTime: '2100', isDone: false },
+    ],
   },
   {
     day: 'friday',
-    task: [{ taskId: "90018", taskName: 'لهو و لعب', taskTime: '1800', isDone: false }],
+    task: [
+      {
+        taskId: '90018',
+        taskName: 'لهو و لعب',
+        taskTime: '1800',
+        isDone: false,
+      },
+    ],
   },
 ];
 
@@ -116,14 +185,16 @@ function defaultTask(day) {
       for (let j = 0; j < days[i].task.length; j++) {
         tasks.innerHTML += `<div id=${days[i].task[j].taskId} class="task">
   <div class="row">
-  <input 'onclick="checkBoxFunction(this)" type="checkbox" ${days[i].task[j].isDone ? 'checked' : ''}>
-    <p class="task-text ${days[i].task[j].isDone ? 'checked' : ''}">${days[i].task[j].taskName}</p>
+  <input onclick="checkBoxFunction(this)" type="checkbox"  class="${
+    days[i].task[j].isDone ? 'checked' : ''
+  }">
+    <p class="task-text ">${days[i].task[j].taskName}</p>
   </div>
 
   <div class="task-btns row">
     <button class="task-btn">${days[i].task[j].taskTime.slice(0, 2)}:${days[
-            i
-          ].task[j].taskTime.slice(2, 4)}</button>
+          i
+        ].task[j].taskTime.slice(2, 4)}</button>
     <svg
       onclick="removingTask(this)"
       xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +267,7 @@ function dayOnClick(e) {
 function removingTask(e) {
   let selectedTask = e.parentElement.parentElement;
   // console.log(selectedTask)
-  let tempId = selectedTask.getAttribute("id");
+  let tempId = selectedTask.getAttribute('id');
   // console.log(tempId)
   // selectedTask.remove();
   // console.log(days[flagDay].task)
@@ -217,19 +288,18 @@ function deleteAll() {
     temp = document.getElementById(`${days[flagDay].task[i].taskId}`);
     temp.remove();
   }
-  days[flagDay].task.splice(0, days[flagDay].task.length)
-
+  days[flagDay].task.splice(0, days[flagDay].task.length);
 }
 function checkBoxFunction(e) {
   let temp = e.parentElement;
-  let tempId = temp.parentElement.getAttribute("id");
+  let tempId = temp.parentElement.getAttribute('id');
   console.log(tempId);
   // console.log(temp.textContent);
-  temp.classList.toggle("checked");
+  temp.classList.toggle('checked');
   for (let i = 0; i < days[flagDay].task.length; i++) {
     // console.log(i)
     if (days[flagDay].task[i].taskId === tempId) {
-      days[flagDay].task[i].isDone = !(days[flagDay].task[i].isDone);
+      days[flagDay].task[i].isDone = !days[flagDay].task[i].isDone;
       break;
     }
   }
