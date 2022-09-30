@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="login-modal hidden">
+  <div class="login-modal">
     <input type="text" id="name" placeholder="نام کاربری" />
     <input type="text" id="lastName" placeholder="نام و نام خانوادگی" />
     <input type="text" id="phone" placeholder="شماره موبایل" />
@@ -20,7 +20,7 @@
     <input id="edit-input" type="text" placeholder="اصلاح وظیفه" />
     <button onclick="submitEdit(this)" class="enter">ثبت</button>
   </div>
-  <div class="main">
+  <div class="main is-blurred">
     <div>
       <div class="days">
         <div class="day back satButt" onclick="dayOnClick(this)">
@@ -113,10 +113,10 @@
       </div>
     </div>
     <div class="add-task">
-      <input type="text" placeholder="وظیفه جدید" />
+      <input id="add-new" type="text" placeholder="وظیفه جدید" />
 
-      <input type="time" name="" id="" />
-      <button>افزودن</button>
+      <input type="time" name="" id="add-new-time" />
+      <button onclick="addTask(this)">افزودن</button>
     </div>
   </div>
   <script src="./cw6.js"></script>

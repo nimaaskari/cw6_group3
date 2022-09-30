@@ -210,6 +210,7 @@ function removingTask(e) {
     }
   }
   selectedTask.remove();
+  daysCounter();
   // console.log(days[flagDay].task)
 }
 function deleteAll() {
@@ -219,6 +220,7 @@ function deleteAll() {
     temp.remove();
   }
   days[flagDay].task.splice(0, days[flagDay].task.length)
+  daysCounter();
 
 }
 function checkBoxFunction(e) {
@@ -265,4 +267,17 @@ function submitEdit(e) {
   // console.log(document.getElementById("edit-input").value);
   document.getElementById(`${globalTempId}`).querySelector(".task-text").textContent = document.getElementById("edit-input").value;
   // console.log(days[flagDay].task)
+}
+function addTask(e) {
+  let newObj = {
+    taskId: Math.floor((Math.random()) * (200000 - 90019 + 1)) + 90019,
+    taskName: document.getElementById("add-new").value,
+    taskTime: document.getElementById("add-new-time").value.split(":").join(""),
+    isDone: false
+  };
+  days[flagDay].task.push(newObj);
+  const daysWeek = ["saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
+  defaultTask(daysWeek[flagDay]);
+  daysCounter();
+
 }
