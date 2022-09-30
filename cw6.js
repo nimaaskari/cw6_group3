@@ -251,7 +251,6 @@ function editTask(e) {
   let selectedTask = e.parentElement.parentElement;
   globalTempId = selectedTask.getAttribute("id");
 
-
 }
 function submitEdit(e) {
   e.parentElement.classList.toggle("hidden");
@@ -269,15 +268,18 @@ function submitEdit(e) {
   // console.log(days[flagDay].task)
 }
 function addTask(e) {
-  let newObj = {
-    taskId: Math.floor((Math.random()) * (200000 - 90019 + 1)) + 90019,
-    taskName: document.getElementById("add-new").value,
-    taskTime: document.getElementById("add-new-time").value.split(":").join(""),
-    isDone: false
-  };
-  days[flagDay].task.push(newObj);
-  const daysWeek = ["saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
-  defaultTask(daysWeek[flagDay]);
-  daysCounter();
-
+  if (document.getElementById("add-new").value && document.getElementById("add-new-time").value) {
+    let newObj = {
+      taskId: Math.floor((Math.random()) * (200000 - 90019 + 1)) + 90019,
+      taskName: document.getElementById("add-new").value,
+      taskTime: document.getElementById("add-new-time").value.split(":").join(""),
+      isDone: false
+    };
+    days[flagDay].task.push(newObj);
+    const daysWeek = ["saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
+    defaultTask(daysWeek[flagDay]);
+    daysCounter();
+  } else {
+    alert("ورودی ها اشتباه هستند");
+  }
 }
