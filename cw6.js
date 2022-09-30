@@ -253,18 +253,23 @@ function editTask(e) {
 
 }
 function submitEdit(e) {
-  e.parentElement.classList.toggle("hidden");
-  main.classList.toggle("is-blurred");
+  if (document.getElementById("edit-input").value) {
+    e.parentElement.classList.toggle("hidden");
+    main.classList.toggle("is-blurred");
+    document.getElementById(`${globalTempId}`).querySelector(".task-text").textContent = document.getElementById("edit-input").value;
+  } else {
+    alert("ورودی اشتباه است")
+  }
   for (let i = 0; i < days[flagDay].task.length; i++) {
     // console.log(i)
-    if (days[flagDay].task[i].taskId === globalTempId) {
+    if (days[flagDay].task[i].taskId === globalTempId && document.getElementById("edit-input").value) {
+
       days[flagDay].task[i].taskName = document.getElementById("edit-input").value;
       break;
     }
   }
   // console.log(document.getElementById(`${globalTempId}`).querySelector(".task-text").textContent);
   // console.log(document.getElementById("edit-input").value);
-  document.getElementById(`${globalTempId}`).querySelector(".task-text").textContent = document.getElementById("edit-input").value;
   // console.log(days[flagDay].task)
 }
 function addTask(e) {
