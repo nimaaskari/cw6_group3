@@ -101,6 +101,7 @@ svg {
   background: linear-gradient(90deg,
       rgba(255, 171, 0, 1) 0%,
       rgba(227, 255, 0, 1) 100%);
+  /* background-color: yellow; */
   border: none;
   border-radius: 10px;
   box-shadow: 3px 3px 7px #222;
@@ -244,4 +245,8 @@ button {
 
 .checked {
   text-decoration: line-through;
+}
+
+.background-checked {
+  opacity: 0.5;
 }
